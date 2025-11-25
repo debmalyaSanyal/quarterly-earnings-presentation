@@ -11,53 +11,44 @@
 
   <!-- Highlight.js for code highlighting -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
-
-  <style>
-    /* small visual tweaks */
-    .email-footer { font-size: 0.9rem; opacity: 0.9; margin-top: 1rem; }
-    .small-muted { font-size: 0.9rem; opacity: 0.8; }
-    .notes { font-size: 0.9rem; color: #222; }
-  </style>
 </head>
 <body>
 
 <div class="reveal">
   <div class="slides">
 
-    <!-- Title slide (HTML) -->
+    <!-- TITLE SLIDE with visible email -->
     <section>
       <h1>Q3 Quarterly Earnings</h1>
       <h3>Prepared for Stakeholders</h3>
-      <p class="small-muted">Technical Consultant — Financial Analytics</p>
-      <p class="email-footer">Contact: <strong>22f3003000@ds.study.iitm.ac.in</strong></p>
+
+      <!-- REQUIRED VISIBLE EMAIL -->
+      <p><strong>Email:</strong> 22f3003000@ds.study.iitm.ac.in</p>
 
       <aside class="notes">
-        Use this slide to introduce the report. Mention key highlights you'll dive into:
-        revenue, net income, guidance, and key operational items.
+        Mention overview: revenue, net income, margins, and guidance.
       </aside>
     </section>
 
-    <!-- Markdown slide (one slide written in Markdown) -->
+    <!-- MARKDOWN SLIDE -->
     <section data-markdown>
       <textarea data-template>
----
-# Highlights (Markdown slide)
+# Key Highlights (Markdown)
 
-- **Revenue:** Grew by **6.2% QoQ**.
-- **Net Income:** Improved due to margin expansion.
-- **Expenses:** Investment in technology increased opex briefly.
+- **Revenue:** +6.2% QoQ  
+- **Net Income:** Margin expansion  
+- **Tech Investments:** Increased OPEX  
 
-> *This slide is authored in Markdown (embedded inside index.html).*
+> This slide is written entirely in Markdown.
 
----
       </textarea>
 
       <aside class="notes">
-        Read through highlights, call out the most material item (revenue or margin change).
+        Discuss each highlight in sequence.
       </aside>
     </section>
 
-    <!-- Slide with fragments (animated elements) -->
+    <!-- FRAGMENTS -->
     <section>
       <h2>Revenue Breakdown</h2>
       <ul>
@@ -67,76 +58,69 @@
       </ul>
 
       <aside class="notes">
-        Click or use arrow key to reveal each revenue item progressively.
+        Reveal items one by one.
       </aside>
     </section>
 
-    <!-- Slide with code and syntax highlighting -->
+    <!-- CODE HIGHLIGHT -->
     <section>
-      <h2>Sample Calculation (Code)</h2>
-
+      <h2>Margin Calculation (Code)</h2>
       <pre><code class="language-python">
-# Example: simple margin calculation
 revenue = 245_000_000
-cost_of_goods_sold = 145_000_000
-gross_margin = (revenue - cost_of_goods_sold) / revenue
-print(f"Gross margin = {gross_margin:.2%}")
+cogs = 145_000_000
+margin = (revenue - cogs) / revenue
+print(f"Gross Margin = {margin:.2%}")
       </code></pre>
 
       <aside class="notes">
-        Walk through the Python snippet and show how margin is derived from top-level numbers.
+        Explain margin formula.
       </aside>
     </section>
 
-    <!-- MathJax / financial formula slide -->
+    <!-- MATH (MathJax) -->
     <section>
       <h2>Financial Formula</h2>
+      <p>Discounted Cash Flow:</p>
       <p>
-        Present value of cash flows (discounted cash flow):
+        \( \text{PV} = \sum_{t=1}^{T} \frac{CF_t}{(1 + r)^t} \)
       </p>
-      <p>
-        \( \displaystyle \text{PV} = \sum_{t=1}^{T} \frac{CF_t}{(1 + r)^t} \)
-      </p>
-
-      <p class="small-muted fragment">Where \(CF_t\) = cash flow at time t, \(r\) = discount rate.</p>
 
       <aside class="notes">
-        Use this slide to explain DCF at a high level. Optionally replace formula constants with example values.
+        Provide example with numbers.
       </aside>
     </section>
 
-    <!-- Slide with speaker notes and an image (example background image) -->
+    <!-- BACKGROUND IMAGE -->
     <section data-background-image="https://images.unsplash.com/photo-1526378728052-4f5b6a63b68e?auto=format&fit=crop&w=1400&q=60">
       <h2 class="fragment">Strategic Investments</h2>
-      <p class="fragment">Cloud migration and AI-driven trading systems.</p>
+      <p class="fragment">Cloud, Automation, AI Analytics</p>
 
       <aside class="notes">
-        Background image used as visual emphasis. This slide highlights capex and project milestones.
+        Use image for emphasis on innovation.
       </aside>
     </section>
 
-    <!-- Closing slide -->
+    <!-- END -->
     <section>
-      <h2>Questions</h2>
-      <p>Thank you — reach me at <strong>22f3003000@ds.study.iitm.ac.in</strong></p>
+      <h2>Thank You</h2>
+      <p><strong>Contact:</strong> 22f3003000@ds.study.iitm.ac.in</p>
+
       <aside class="notes">
-        Invite questions; have backup slides with details ready.
+        Invite questions.
       </aside>
     </section>
 
   </div>
 </div>
 
-<!-- Reveal.js, plugins, Highlight.js, MathJax (from CDNs) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/markdown/markdown.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/notes/notes.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/highlight/highlight.min.js"></script>
 
-<!-- Highlight.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
 
-<!-- MathJax (for LaTeX math rendering) -->
+<!-- MathJax -->
 <script>
 window.MathJax = {
   tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
@@ -146,20 +130,9 @@ window.MathJax = {
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
 <script>
-  // Initialize Reveal
   Reveal.initialize({
     hash: true,
-    plugins: [ RevealMarkdown, RevealNotes, RevealHighlight ],
-    markdown: { smartypants: true },
-    // enable speaker notes and show them on external window (press 's' during presentation)
-    // highlight plugin will auto-highlight code blocks
-  });
-
-  // highlight.js init (just in case)
-  document.addEventListener('DOMContentLoaded', (event) => {
-    document.querySelectorAll('pre code').forEach((el) => {
-      if (window.hljs) { hljs.highlightElement(el); }
-    });
+    plugins: [ RevealMarkdown, RevealNotes, RevealHighlight ]
   });
 </script>
 
